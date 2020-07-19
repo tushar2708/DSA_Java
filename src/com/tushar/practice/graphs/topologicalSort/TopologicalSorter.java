@@ -26,7 +26,6 @@ public class TopologicalSorter {
         // So that the vertex with no outgoing edges,
         // will end up being on the bottom of the stack
         stack.push(current);
-
     }
 
     public TopologicalSorter() {

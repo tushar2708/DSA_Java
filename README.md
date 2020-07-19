@@ -1,9 +1,12 @@
 # DSA_Java
 Data-structure & Algorithms playbook to keep my brain from rusting.
 
+[Text notes](Notes.md)
+
 #Sections
 
 ## Graphs:
+
 [Simple Adjacency Matrix Graph](src/com/tushar/practice/graphs/simple/AdjacencyMatrixGraph.java)
 
 [Simple Adjacency List Graph](src/com/tushar/practice/graphs/simple/AdjacencyMatrixGraph.java)
@@ -13,6 +16,7 @@ Data-structure & Algorithms playbook to keep my brain from rusting.
 [Depth First Search](src/com/tushar/practice/graphs/traversal/DepthFirstSearch.java)
 
 [Basic WebCrawler (using BFS)](src/com/tushar/practice/graphs/webcrawler/WebCrawler.java)
+
 
 
 

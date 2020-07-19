@@ -13,7 +13,6 @@ public class TopologicalSorterTest {
 
         SimpleGraph graph = new SimpleGraph();
 
-
         Vertex a = new Vertex("A");
         Vertex b = new Vertex("B");
         Vertex c = new Vertex("C");
