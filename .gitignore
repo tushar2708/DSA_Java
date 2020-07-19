@@ -1,4 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
+
+# Mac directories
+*.DS_Store
+
 ### Java template
 # Compiled class file
 *.class
@@ -41,4 +45,5 @@ gradle-app.setting
 # gradle/wrapper/gradle-wrapper.properties
 
 .idea/
+DSA_Java.iml
 gradle/
