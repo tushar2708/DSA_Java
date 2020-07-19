@@ -6,7 +6,7 @@ import java.util.List;
 public class Vertex {
 
     private String name;
-    private boolean visited;
+//    private boolean visited;
     private List<Vertex> adjacencyList;
 
     public Vertex(String name) {
@@ -14,13 +14,13 @@ public class Vertex {
         this.adjacencyList = new ArrayList<>();
     }
 
-    public boolean getVisited() {
-        return visited;
-    }
-
-    public void setVisited(boolean visited) {
-        this.visited = visited;
-    }
+//    public boolean getVisited() {
+//        return visited;
+//    }
+//
+//    public void setVisited(boolean visited) {
+//        this.visited = visited;
+//    }
 
     public List<Vertex> getAdjacencyList() {
         return adjacencyList;

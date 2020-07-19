@@ -1,9 +1,14 @@
 package com.tushar.practice.graphs.traversal;
 
 import com.tushar.practice.graphs.common.Vertex;
+import com.tushar.practice.graphs.graphDS.SimpleGraph;
 
 public class App {
     public static void main(String[] args) {
+
+        SimpleGraph graph = new SimpleGraph();
+
+
         Vertex a = new Vertex("A");
         Vertex b = new Vertex("B");
         Vertex c = new Vertex("C");
@@ -12,6 +17,8 @@ public class App {
         Vertex f = new Vertex("F");
         Vertex g = new Vertex("G");
         Vertex h = new Vertex("H");
+
+        graph.addVertices(a, b, c, d, e, f, g, h);
 
         a.addNeighbour(b);
         a.addNeighbour(f);
@@ -33,21 +40,28 @@ public class App {
 
         h.addNeighbour(g);
 
-        BreadthFirstSearch searchBFS = new BreadthFirstSearch();
-        DepthFirstSearch searchDFS = new DepthFirstSearch();
+        graph.setTraversalStrategy(new BreadthFirstSearch());
+        try {
+            graph.traverse(a);
+        } catch (Exception exception) {
+            graph.setTraversalStrategy(new BreadthFirstSearch());
+            try {
+                graph.traverse(a);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
 
-        searchBFS.traverse(a);
-
-        clearVisitedStatus(a, b, c, d, e, f, g, h);
-
-
-        searchDFS.traverse(a);
-    }
-
-    private static void clearVisitedStatus(Vertex... vertices) {
-        for (Vertex v :
-                vertices) {
-            v.setVisited(false);
+        graph.setTraversalStrategy(new DepthFirstSearch());
+        try {
+            graph.traverse(a);
+        } catch (Exception exception) {
+            graph.setTraversalStrategy(new BreadthFirstSearch());
+            try {
+                graph.traverse(a);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
         }
     }
 }

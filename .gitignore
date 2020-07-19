@@ -47,3 +47,5 @@ gradle-app.setting
 .idea/
 DSA_Java.iml
 gradle/
+out/
+target/
