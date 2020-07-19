@@ -1,4 +1,4 @@
-package com.tushar.practice.graphs.cycleDetection;
+package com.tushar.practice.graphs.dfs_cycleDetection;
 
 import com.tushar.practice.graphs.common.Vertex;
 import com.tushar.practice.graphs.graphDS.SimpleGraph;

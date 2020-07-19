@@ -1,5 +1,5 @@
 #### Cycle detection
-###### [Implementation](src/com/tushar/practice/graphs/cycleDetection/CycleDetector.java)
+###### [Implementation](dfs_cycleDetection/CycleDetector.java)
 
 Where cycles in graph are useful?
 
@@ -15,7 +15,11 @@ While traversing a graph using DFS, if while going through any vertex's neighbou
 (haven't yet backtracked from the vertex), if we find ourselves at that vertex again,
  we just confirmed a cycle
 
+#### Maze solving
+##### [Implementation](dfs_mazeSolve/MazeSolver.java)
 
+* Run a DFS, while considering out-of-map, and visited as backtracking conditions.
+* If you reach a cell with desired properties, then the search is complete. 
 
 
 
@@ -24,7 +28,7 @@ While traversing a graph using DFS, if while going through any vertex's neighbou
 
 
 #### Topological sorting & Hamiltonian path:
-###### [implementation of topological sorting](src/com/tushar/practice/graphs/topologicalSort/TopologicalSorter.java)
+###### [implementation of topological sorting](dfs_topologicalSort/TopologicalSorter.java)
 
 A path in an undirected or directed graph, that visits each vertex exactly once.
 If a Hamiltonian path exists, then the topological sort order is unique.

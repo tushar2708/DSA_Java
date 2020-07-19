@@ -1,4 +1,4 @@
-package com.tushar.practice.graphs.topologicalSort;
+package com.tushar.practice.graphs.dfs_topologicalSort;
 
 import com.tushar.practice.graphs.common.Vertex;
 import com.tushar.practice.graphs.graphDS.SimpleGraph;

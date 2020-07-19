@@ -1,4 +1,4 @@
-package com.tushar.practice.graphs.webcrawler;
+package com.tushar.practice.graphs.bfs_webcrawler;
 
 public class App {
     public static void main(String[] args){

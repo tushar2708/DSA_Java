@@ -1,4 +1,4 @@
-package com.tushar.practice.graphs.webcrawler;
+package com.tushar.practice.graphs.bfs_webcrawler;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
