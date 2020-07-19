@@ -14,13 +14,17 @@ public class BreadthFirstSearch {
 
         while (!queue.isEmpty()) {
             Vertex current = queue.remove();
+            System.out.print(current + " ");
             current.setVisited(true);
-            System.out.println(current);
+
             for (Vertex next : current.getAdjacencyList()) {
                 if (!next.getVisited()) {
                     queue.add(next);
                 }
             }
         }
+
+        System.out.println();
+
     }
 }

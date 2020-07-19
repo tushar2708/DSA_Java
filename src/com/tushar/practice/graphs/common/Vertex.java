@@ -38,6 +38,7 @@ public class Vertex {
 
     public String toString() {
         return name;
+//        return "(name: " + name + ", visited: " + visited + ")";
     }
 
 

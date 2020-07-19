@@ -33,8 +33,22 @@ public class App {
 
         h.addNeighbour(g);
 
-        BreadthFirstSearch search = new BreadthFirstSearch();
+        BreadthFirstSearch searchBFS = new BreadthFirstSearch();
+        DepthFirstSearch searchDFS = new DepthFirstSearch();
 
-        search.traverse(a);
+        searchBFS.traverse(a);
+
+        clearVisitedStatus(a, b, c, d, e, f, g, h);
+
+
+        searchDFS.traverse(a);
+    }
+
+    private static void clearVisitedStatus(Vertex... vertices) {
+        for (Vertex v :
+                vertices) {
+            v.setVisited(false);
+        }
     }
 }
+
