@@ -1,7 +1,7 @@
 package com.tushar.practice.graphs.dfs_cycleDetection;
 
-import com.tushar.practice.graphs.common.Vertex;
-import com.tushar.practice.graphs.graphDS.SimpleGraph;
+import com.tushar.practice.graphs.graph_ds.SimpleVertex;
+import com.tushar.practice.graphs.graph_ds.SimpleGraph;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -11,14 +11,14 @@ public class CycleDetectorTest {
     public void hasCycle() {
         SimpleGraph graph = new SimpleGraph();
 
-        Vertex a = new Vertex("A");
-        Vertex b = new Vertex("B");
-        Vertex c = new Vertex("C");
-        Vertex d = new Vertex("D");
-        Vertex e = new Vertex("E");
-        Vertex f = new Vertex("F");
-        Vertex g = new Vertex("G");
-        Vertex h = new Vertex("H");
+        SimpleVertex a = new SimpleVertex("A");
+        SimpleVertex b = new SimpleVertex("B");
+        SimpleVertex c = new SimpleVertex("C");
+        SimpleVertex d = new SimpleVertex("D");
+        SimpleVertex e = new SimpleVertex("E");
+        SimpleVertex f = new SimpleVertex("F");
+        SimpleVertex g = new SimpleVertex("G");
+        SimpleVertex h = new SimpleVertex("H");
 
         graph.addVertices(a, b, c, d, e, f, g, h);
 
@@ -52,14 +52,14 @@ public class CycleDetectorTest {
     public void hasNoCycle() {
         SimpleGraph graph = new SimpleGraph();
 
-        Vertex a = new Vertex("A");
-        Vertex b = new Vertex("B");
-        Vertex c = new Vertex("C");
-        Vertex d = new Vertex("D");
-        Vertex e = new Vertex("E");
-        Vertex f = new Vertex("F");
-        Vertex g = new Vertex("G");
-        Vertex h = new Vertex("H");
+        SimpleVertex a = new SimpleVertex("A");
+        SimpleVertex b = new SimpleVertex("B");
+        SimpleVertex c = new SimpleVertex("C");
+        SimpleVertex d = new SimpleVertex("D");
+        SimpleVertex e = new SimpleVertex("E");
+        SimpleVertex f = new SimpleVertex("F");
+        SimpleVertex g = new SimpleVertex("G");
+        SimpleVertex h = new SimpleVertex("H");
 
         graph.addVertices(a, b, c, d, e, f, g, h);
 

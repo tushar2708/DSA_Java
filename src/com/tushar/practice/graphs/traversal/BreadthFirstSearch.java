@@ -1,6 +1,6 @@
 package com.tushar.practice.graphs.traversal;
 
-import com.tushar.practice.graphs.common.Vertex;
+import com.tushar.practice.graphs.graph_ds.SimpleVertex;
 
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -9,8 +9,8 @@ import java.util.Set;
 
 public class BreadthFirstSearch implements TraversalStrategy {
 
-    Set<Vertex> visited;
-    Queue<Vertex> queue;
+    Set<SimpleVertex> visited;
+    Queue<SimpleVertex> queue;
     private boolean used;
 
 
@@ -19,7 +19,7 @@ public class BreadthFirstSearch implements TraversalStrategy {
     }
 
     @Override
-    public void traverse(Vertex root) throws Exception {
+    public void traverse(SimpleVertex root) throws Exception {
 
         if (used) throw new Exception("traverse already used, create new instance of BreadthFirstSearch");
         used = true;
@@ -30,11 +30,11 @@ public class BreadthFirstSearch implements TraversalStrategy {
         queue.add(root);
 
         while (!queue.isEmpty()) {
-            Vertex current = queue.remove();
+            SimpleVertex current = queue.remove();
             System.out.print(current + " ");
             visited.add(current);
 
-            for (Vertex next : current.getAdjacencyList()) {
+            for (SimpleVertex next : current.getAdjacencyList()) {
                 if (!visited.contains(next)) {
                     queue.add(next);
                 }

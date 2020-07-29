@@ -1,29 +1,29 @@
 package com.tushar.practice.graphs.dfs_cycleDetection;
 
-import com.tushar.practice.graphs.common.Vertex;
-import com.tushar.practice.graphs.graphDS.SimpleGraph;
+import com.tushar.practice.graphs.graph_ds.SimpleVertex;
+import com.tushar.practice.graphs.graph_ds.SimpleGraph;
 
 import java.util.HashSet;
 import java.util.Set;
 
 public class CycleDetector {
 
-    private Set<Vertex> visited;
-    private Set<Vertex> beingVisited;
+    private Set<SimpleVertex> visited;
+    private Set<SimpleVertex> beingVisited;
 
     public CycleDetector() {
         visited = new HashSet<>();
         beingVisited = new HashSet<>();
     }
 
-    private void dfs(Vertex current) throws Exception {
+    private void dfs(SimpleVertex current) throws Exception {
         visited.add(current);
         beingVisited.add(current);
         System.out.println("Started visiting vertex: " + current);
 
 
         // First visit all the neighbours recursively
-        for (Vertex next :
+        for (SimpleVertex next :
                 current.getAdjacencyList()) {
 
             // If any of the neighbours, is already being visited,
@@ -47,7 +47,7 @@ public class CycleDetector {
 
     public boolean hasCycle(SimpleGraph graph) {
 
-        for (Vertex vtx : graph.getVertices()) {
+        for (SimpleVertex vtx : graph.getVertices()) {
             if (!visited.contains(vtx)) {
                 try {
                     dfs(vtx);

@@ -1,21 +1,21 @@
 package com.tushar.practice.graphs.dfs_topologicalSort;
 
-import com.tushar.practice.graphs.common.Vertex;
-import com.tushar.practice.graphs.graphDS.SimpleGraph;
+import com.tushar.practice.graphs.graph_ds.SimpleVertex;
+import com.tushar.practice.graphs.graph_ds.SimpleGraph;
 
 import java.util.*;
 
 public class TopologicalSorter {
 
-    private Deque<Vertex> stack;
-    private Set<Vertex> visited;
+    private Deque<SimpleVertex> stack;
+    private Set<SimpleVertex> visited;
 
 
-    private void dfs(Vertex current) {
+    private void dfs(SimpleVertex current) {
         visited.add(current);
 
         // First visit all the neighbours recursively
-        for (Vertex next :
+        for (SimpleVertex next :
                 current.getAdjacencyList()) {
             if (!visited.contains(next)) {
                 dfs(next);
@@ -33,9 +33,9 @@ public class TopologicalSorter {
         visited = new HashSet<>();
     }
 
-    public List<Vertex> sort(SimpleGraph graph) {
+    public List<SimpleVertex> sort(SimpleGraph graph) {
 
-        List<Vertex> sorted = new ArrayList<>();
+        List<SimpleVertex> sorted = new ArrayList<>();
 
         if (graph.getVertices().isEmpty()) {
             return sorted;

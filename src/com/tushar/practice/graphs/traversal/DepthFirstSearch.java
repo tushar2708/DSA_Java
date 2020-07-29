@@ -1,24 +1,24 @@
 package com.tushar.practice.graphs.traversal;
 
-import com.tushar.practice.graphs.common.Vertex;
+import com.tushar.practice.graphs.graph_ds.SimpleVertex;
 
 import java.util.HashSet;
 import java.util.Set;
 
 public class DepthFirstSearch implements TraversalStrategy {
 
-    private Set<Vertex> visited;
+    private Set<SimpleVertex> visited;
     private boolean used;
 
     public DepthFirstSearch() {
         visited = new HashSet<>();
     }
 
-    private void traverseRecur(Vertex current) {
+    private void traverseRecur(SimpleVertex current) {
         System.out.print(current + " ");
         visited.add(current);
 
-        for (Vertex next : current.getAdjacencyList()) {
+        for (SimpleVertex next : current.getAdjacencyList()) {
             if (!visited.contains(next)) {
                 traverseRecur(next);
             }
@@ -26,7 +26,7 @@ public class DepthFirstSearch implements TraversalStrategy {
     }
 
     @Override
-    public void traverse(Vertex root) throws Exception {
+    public void traverse(SimpleVertex root) throws Exception {
 
         if (used) throw new Exception("traverse already used, create new instance of DepthFirstSearch");
         used = true;

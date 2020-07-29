@@ -1,15 +1,15 @@
 package com.tushar.practice.graphs.simple;
 
-import com.tushar.practice.graphs.common.Vertex;
+import com.tushar.practice.graphs.graph_ds.SimpleVertex;
 
 public class AdjacencyListGraph {
 
     public static void main(String[] args) {
 
-        Vertex a = new Vertex("A");
-        Vertex b = new Vertex("B");
-        Vertex c = new Vertex("C");
-        Vertex d = new Vertex("D");
+        SimpleVertex a = new SimpleVertex("A");
+        SimpleVertex b = new SimpleVertex("B");
+        SimpleVertex c = new SimpleVertex("C");
+        SimpleVertex d = new SimpleVertex("D");
 
         a.addNeighbour(b);
         a.addNeighbour(c);
