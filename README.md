@@ -17,6 +17,7 @@ Data-structure & Algorithms playbook to keep my brain from rusting.
 * [Dag Shortest Path Algorithm](src/com/tushar/practice/graphs/shortest_path/DagAlgorithm.java)
 * [Related- Disjoint-Set/Union Find Datastructure](src/com/tushar/practice/graphs/disjoint_sets/DisjointSetNode.java) 
 * [Minimum Spanning Tree - Kruskal's Algorithm](src/com/tushar/practice/graphs/spanning_trees/KruskalsAlgorithm.java)
+* [Minimum Spanning Tree - Prim's Algorithm (lazy & eager)](src/com/tushar/practice/graphs/spanning_trees/PrimsAlgorithm.java)
 
 ##### Useful Resources:
 * Using Bellman-Ford(shortest path) path to arbitrage Forex pairs (finding negative weight cycles): [Here](https://medium.com/@anilpai/currency-arbitrage-using-bellman-ford-algorithm-8938dcea56ea)
