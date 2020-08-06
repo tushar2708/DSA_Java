@@ -5,7 +5,7 @@
 ## Graphs:
 
 ### Cycle detection
-#### [Implementation](src/com/tushar/practice/graphs/dfs_cycleDetection/CycleDetector.java)
+#### [Implementation](src/com/tushar/dsa/graphs/dfs_cycleDetection/CycleDetector.java)
 
 Where cycles in graph are useful?
 
@@ -22,7 +22,7 @@ While traversing a graph using DFS, if while going through any pathVertex's neig
  we just confirmed a cycle
 
 ### Maze solving
-#### [Implementation](src/com/tushar/practice/graphs/dfs_mazeSolve/MazeSolver.java)
+#### [Implementation](src/com/tushar/dsa/graphs/dfs_mazeSolve/MazeSolver.java)
 
 * Run a DFS, while considering out-of-map, and visited as backtracking conditions.
 * If you reach a cell with desired properties, then the search is complete. 
@@ -75,7 +75,7 @@ Faster than both other algorithms, if the graph is a DAG
 2. Start relaxing the vertices in topologically sorted order.
 
 #### Topological sorting & Hamiltonian path:
-##### [implementation of topological sorting](src/com/tushar/practice/graphs/dfs_topologicalSort/TopologicalSorter.java)
+##### [implementation of topological sorting](src/com/tushar/dsa/graphs/dfs_topologicalSort/TopologicalSorter.java)
 
 A path in an undirected or directed graph, that visits each pathVertex exactly once.
 If a Hamiltonian path exists, then the topological sort order is unique.
@@ -179,11 +179,42 @@ There are 2 types of Prim's algorithms:
     that is loop-free (basically MST)
     * STP also ensures connectivity to all points.
 
+### Strongly Connected Components
+
+Connected graph: All its vertices are connected.
+Strongly Connected graph: Can reach from any vertex to any other vertex
+1. Undirected graphs are always strongly connected.
+2. In directed graphs, there are vertices that cannot be reached from everywhere.
+3. These strongly connected clusters can be found by DFS, in O(V) time.
+4. Fun fact: If we represent each strongly connected component as a node,
+ resultant graph would be a DAG.
+5. A directed graph is a DAG, only if there is no sub-graph that is strongly connected.
+6. Every non-trivial strongly-connected component Directed cycle 
+
+Applications of connected components:
+Ecology: Determine hierarchy of food need
+Software dev: Create related paackages
+Astrophysics: Grouping stars into clusters
+Recommendation systems: youtube videos
+
+##### Algorithms for Connected components:
+
+##### Kosaraju algorithm:
+
+1. Do DFS in the graph, and keep pushing the nodes to a stack. (just like topological sort)
+2. Transpose the graph, reverse the edges. (create a copy)
+3. Keep popping the nodes from the stack, and run DFS starting from that node, to get it's STC
 
 
+/*
+Time complexity:
+1st DFS for topological sort: O(V+E)
+Reverse the graph: O(V+E)
+2nd DFS for graph: O(V+E)
 
+ */
 
-
+##### Tarjan algorithm:
 
 
 
