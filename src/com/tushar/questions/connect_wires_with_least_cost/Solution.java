@@ -1,4 +1,4 @@
-package com.tushar.interviews;
+package com.tushar.questions.connect_wires_with_least_cost;
 
 /*
 Question:
@@ -24,7 +24,8 @@ Solution:
 
 import java.util.PriorityQueue;
 
-public class ConnectWiresWithLeastCost {
+public class Solution {
+
     public static int findLowestPossibleCost(int[] wireLengths) {
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
 
@@ -53,9 +54,5 @@ public class ConnectWiresWithLeastCost {
         return cost;
     }
 
-    public static void main(String[] args) {
-        int[] wires = {13, 5, 6, 7, 1, 9, 2};
 
-        System.out.println("cost: " + findLowestPossibleCost(wires));
-    }
 }

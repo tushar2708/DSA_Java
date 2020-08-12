@@ -1,8 +1,25 @@
 # DSA_Java
 Data-structure & Algorithms playbook to keep my brain from rusting.
 
-[Text notes](GraphNotes.md)
+## Arrays
 
+### Moving windows:
+
+
+### Dynamic programming:
+[Longest increasing subsequence](src/com/tushar/dsa/dynamicProgramming/longest_increasing_subsequence/LongestIncreasingSubsequence.java)
+[Maximum increasing subsequence](src/com/tushar/dsa/dynamicProgramming/maximum_increasing_subsequence/MaximumIncreasingSubsequence.java)
+
+
+
+
+## Sorting algorithms:
+
+## String matching algorithms
+
+## Graphs
+
+[Text notes](GraphNotes.md)
 
 * [Simple Adjacency Matrix Graph](src/com/tushar/dsa/graphs/core/simple/AdjacencyMatrixGraph.java)
 * [Simple Adjacency List Graph](src/com/tushar/dsa/graphs/core/simple/AdjacencyMatrixGraph.java)
@@ -28,5 +45,7 @@ Data-structure & Algorithms playbook to keep my brain from rusting.
 ##### Useful Resources:
 * Using Bellman-Ford(shortest path) path to arbitrage Forex pairs (finding negative weight cycles): [Here](https://medium.com/@anilpai/currency-arbitrage-using-bellman-ford-algorithm-8938dcea56ea)
 
+#### TODOs
 
- 
+* Boyer-Moore string matchins algorithm: https://nptel.ac.in/courses/106/106/106106127/
+* Parallel algorithms:  
