@@ -370,7 +370,7 @@ Algorithms to find Eulerian cycle:
 2. Create 2 stacks. Choose a starting vertex at random, and push it to the stack 1.
 3. Push its neighbours via "unvisited edges"(not vertex) to stack1(in DFS fashion), and mark the edges (both sides) as visited.
 4. Once we see that no unvisited edges are remaining for a given vertex, pop it from the first stack, and push to 2nd stack.
-5. Continue till stack1 is empty, and all it's edges have moved to stack2.
+5. Continue till stack1 is empty, and all its edges have moved to stack2.
 6. Empty stack2 into a list, this list is the eulerian cycle result.
 
 **Applications of euclerian cycles:**

@@ -15,4 +15,10 @@ public class LongestIncreasingSubsequenceTest {
         int longest = new LongestIncreasingSubsequence().longestIncreasingSubsequence(new int[]{2, 5, 1, 8, 3});
         System.out.println("longest: " + longest);
     }
+
+    @Test
+    public void test3() {
+        int longest = new LongestIncreasingSubsequence().longestIncreasingSubsequence(new int[]{2, 1, 3, 1, 6, 2});
+        System.out.println("longest: " + longest);
+    }
 }

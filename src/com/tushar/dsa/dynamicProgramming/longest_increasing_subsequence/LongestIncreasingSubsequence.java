@@ -18,18 +18,7 @@ public class LongestIncreasingSubsequence {
 //        int maxLen = lisRecur(arr, 0, Integer.MIN_VALUE);
 
         // iterative approach
-        lis(arr);
-
-        int maxLen = 0;
-        for (int x : mem) {
-            System.out.println(x);
-
-            if (maxLen < x) {
-                maxLen = x;
-            }
-        }
-
-        return maxLen;
+        return lis(arr);
     }
 
     // lisRecur doesn't use any memoization
@@ -65,10 +54,10 @@ public class LongestIncreasingSubsequence {
         // array to store sub-problem solution. L[i] stores the length
         // of the longest increasing subsequence ends with arr[i]
         mem = new int[n];
-//        Arrays.fill(mem, 0);
+        Arrays.fill(mem, 1);
 
         // longest increasing subsequence ending with arr[0] has length 1
-        mem[0] = 1;
+//        mem[0] = 1;
 
         // start from second element in the array
         for (int i = 1; i < n; i++) {
@@ -76,21 +65,20 @@ public class LongestIncreasingSubsequence {
             for (int j = 0; j < i; j++) {
                 // find longest increasing subsequence that ends with arr[j]
                 // where arr[j] is less than the current element arr[i]
-
-                if (arr[j] < arr[i]) {
-                    mem[i] = Math.max(mem[i], mem[j]);
+                if (arr[j] <= arr[i]) {
+                    mem[i] = Math.max(1 + mem[j], mem[i]);
                 }
             }
-
-            // include arr[i] in LIS
-            mem[i]++;
         }
+
+        // akanksha- mem is your answer. Don't go below this line Print it in the given format
+        for (int x : mem)
+            System.out.print(x + " ");
 
         // find longest increasing subsequence (having maximum length)
         int lis = Integer.MIN_VALUE;
         for (int x : mem)
             lis = Math.max(lis, x);
-
         return lis;
     }
 
