@@ -8,7 +8,7 @@ Data-structure & Algorithms playbook to keep my brain from rusting.
 
 ### Dynamic programming:
 [Longest increasing subsequence](src/com/tushar/dsa/dynamicProgramming/longest_increasing_subsequence/LongestIncreasingSubsequence.java)
-[Maximum increasing subsequence](src/com/tushar/dsa/dynamicProgramming/maximum_sum_subsequence/MaximumIncreasingSubsequence.java)
+[Maximum increasing subsequence](src/com/tushar/dsa/dynamicProgramming/maximum_sum_increasing_subsequence/MaximumIncreasingSubsequence.java)
 
 
 

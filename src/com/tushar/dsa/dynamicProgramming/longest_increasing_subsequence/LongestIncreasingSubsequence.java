@@ -54,10 +54,9 @@ public class LongestIncreasingSubsequence {
         // array to store sub-problem solution. L[i] stores the length
         // of the longest increasing subsequence ends with arr[i]
         mem = new int[n];
-        Arrays.fill(mem, 1);
 
         // longest increasing subsequence ending with arr[0] has length 1
-//        mem[0] = 1;
+        Arrays.fill(mem, 1);
 
         // start from second element in the array
         for (int i = 1; i < n; i++) {
@@ -70,10 +69,6 @@ public class LongestIncreasingSubsequence {
                 }
             }
         }
-
-        // akanksha- mem is your answer. Don't go below this line Print it in the given format
-        for (int x : mem)
-            System.out.print(x + " ");
 
         // find longest increasing subsequence (having maximum length)
         int lis = Integer.MIN_VALUE;
