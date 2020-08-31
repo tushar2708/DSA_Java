@@ -1,4 +1,4 @@
-package com.tushar.dsa.arrays.big_int_multiplication;
+package com.tushar.dsa.strings.big_int_addition;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -8,17 +8,15 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
-
 @RunWith(Parameterized.class)
 public class SolutionTest {
 
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                new String[]{"2","3", "6"},
-                new String[]{"123","456", "56088"},
-                new String[]{"7","8", "56"},
+                new String[]{"2","3", "5"},
+                new String[]{"7","8", "15"},
+                new String[]{"9999","111", "10110"},
         });
     }
 
@@ -34,7 +32,7 @@ public class SolutionTest {
 
     @Test
     public void multiply() {
-        String actual = new Solution().multiply(num1, num2);
+        String actual = new Solution().addStrings(num1, num2);
         Assert.assertEquals(expected, actual);
     }
 }

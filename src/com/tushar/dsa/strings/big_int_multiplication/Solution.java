@@ -1,6 +1,7 @@
-package com.tushar.dsa.arrays.big_int_multiplication;
+package com.tushar.dsa.strings.big_int_multiplication;
 
-// https://leetcode.com/problems/multiply-strings/
+// Question: https://leetcode.com/problems/multiply-strings/
+// Good explanation: https://leetcode.com/problems/multiply-strings/discuss/17605/Easiest-JAVA-Solution-with-Graph-Explanation
 public class Solution {
     public String multiply(String num1, String num2) {
 
