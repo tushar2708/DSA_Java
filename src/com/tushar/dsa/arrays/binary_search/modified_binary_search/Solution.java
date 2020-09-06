@@ -1,4 +1,4 @@
-package com.tushar.dsa.arrays.modified_binary_search;
+package com.tushar.dsa.arrays.binary_search.modified_binary_search;
 
 public class Solution {
 

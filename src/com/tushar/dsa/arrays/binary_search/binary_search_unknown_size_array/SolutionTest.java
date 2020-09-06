@@ -1,4 +1,4 @@
-package com.tushar.dsa.arrays.modified_binary_search;
+package com.tushar.dsa.arrays.binary_search.binary_search_unknown_size_array;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -14,25 +14,25 @@ public class SolutionTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {new int[]{4, 5, 6, 7, 0, 1, 2}, 0, 4},
-                {new int[]{1, 3}, 3, 1},
-                {new int[]{3, 5, 1}, 3, 0},
+                {new Integer[]{0, 1, 2, 4, 5, 6, 7}, 4, 3},
+                {new Integer[]{1, 3}, 3, 1},
+                {new Integer[]{1, 3, 5}, 5, 2},
         });
     }
 
-    private final int[] inputArray;
+    private final Integer[] inputArray;
     private final int inputTarget;
     private final int expected;
 
-    public SolutionTest(final int[] inputArray, final int inputTarget, final int expected) {
+    public SolutionTest(final Integer[] inputArray, final int inputTarget, final int expected) {
         this.inputArray = inputArray;
         this.inputTarget = inputTarget;
         this.expected = expected;
     }
 
     @Test
-    public void sortColors() {
-        int foundIndex = new com.tushar.dsa.arrays.modified_binary_search.Solution().search(inputArray, inputTarget);
+    public void search() {
+        int foundIndex = new Solution().search(new ArrayReader(inputArray), inputTarget);
         Assert.assertEquals(expected, foundIndex);
 
     }
