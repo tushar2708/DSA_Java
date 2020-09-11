@@ -1,4 +1,4 @@
-package com.tushar.dsa.graphs.algorithms.shortest_path;
+package com.tushar.dsa.graphs.algorithms.shortest_path.bellman_ford;
 
 import com.tushar.dsa.graphs.core.graph_ds_with_edges.Edge;
 import com.tushar.dsa.graphs.core.graph_ds_with_edges.Vertex;

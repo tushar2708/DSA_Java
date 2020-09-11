@@ -12,30 +12,30 @@ public class Solution {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
 
         int level = 0;
-        List<List<Integer>> result = new ArrayList();
+        List<List<Integer>> result = new ArrayList<>();
 
-        Deque<TreeNode> q = new LinkedList();
-        if (root != null){
-            List<Integer> levelItems = new LinkedList();
+        Deque<TreeNode> q = new LinkedList<>();
+        if (root != null) {
+            List<Integer> levelItems = new LinkedList<>();
             q.addLast(root);
             levelItems.add(root.val);
             result.add(levelItems);
         }
 
-        while(!q.isEmpty()){
+        while (!q.isEmpty()) {
             int size = q.size();
-            List<Integer> levelItems = new LinkedList();
-            for (int i = 0; i < size; i++){
+            List<Integer> levelItems = new LinkedList<>();
+            for (int i = 0; i < size; i++) {
 
-                if(level % 2 == 0){
+                if (level % 2 == 0) {
                     TreeNode x = q.removeLast();
 
-                    if (x.right != null){
+                    if (x.right != null) {
                         q.addFirst(x.right);
                         levelItems.add(x.right.val);
                     }
 
-                    if (x.left != null){
+                    if (x.left != null) {
                         q.addFirst(x.left);
                         levelItems.add(x.left.val);
                     }
@@ -43,18 +43,18 @@ public class Solution {
 
                     TreeNode x = q.removeFirst();
 
-                    if (x.left != null){
+                    if (x.left != null) {
                         q.addLast(x.left);
                         levelItems.add(x.left.val);
                     }
 
-                    if (x.right != null){
+                    if (x.right != null) {
                         q.addLast(x.right);
                         levelItems.add(x.right.val);
                     }
                 }
             }
-            if (levelItems.size() > 0){
+            if (!levelItems.isEmpty()) {
                 result.add(levelItems);
             }
             level++;

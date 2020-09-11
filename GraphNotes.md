@@ -179,6 +179,12 @@ There are 2 types of Prim's algorithms:
     that is loop-free (basically MST)
     * STP also ensures connectivity to all points.
 
+
+### Bridges and Articulation points:
+* Bridges connect 2 connected components of a graph, 
+and breaking them breaks graph into independent subgraphs
+
+
 ### Strongly Connected Components
 
 Connected graph: All its vertices are connected.
